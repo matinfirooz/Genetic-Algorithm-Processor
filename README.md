@@ -49,9 +49,3 @@ The Genetic Algorithm (GA) is an evolutionary algorithm used for optimization pr
 [1] Alinodehi, S. P. H., Moshfe, S., Zaeimian, M. S., Khoei, A., & Hadidi, K. (2015). High-speed general-purpose genetic algorithm processor. *IEEE Transactions on Cybernetics*, 46(7), 1551-1565.  
 
 ---
-
-###  How to Use  
-1. Clone the repository:  
-   ```sh
-   git clone https://github.com/matinfirooz/genetic-algorithm-processor.git
-   cd genetic-algorithm-processor
