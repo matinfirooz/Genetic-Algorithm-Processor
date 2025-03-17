@@ -21,7 +21,7 @@ In this project, the **GA Processor** is designed to find a **test vector** that
 
 ---
 
-## ⚙️ How the Genetic Algorithm Processor Works  
+##  How the Genetic Algorithm Processor Works  ?
 
 The GA processor follows a **pipelined** execution model, where different stages of the algorithm are processed simultaneously to maximize efficiency.
 
