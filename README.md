@@ -40,16 +40,16 @@ The GA processor follows a **pipelined** execution model, where different stages
 ###  Pipeline Stages & Execution Flow  
 
 1. **Selection Stage**  
-   - Uses **tournament selection** (degree of 5) to pick **two parent chromosomes**.  
-   - A **random number generator** selects parents from different memory banks.  
 
-2. **Crossover & Mutation Stage**  
+   The first stage is the selection stage. It uses a tournament selection strategy with a degree of five to pick two parent chromosomes. A random number generator selects individuals from separate memory banks to ensure diversity.
+
+3. **Crossover & Mutation Stage**  
    - A **random number** determines whether **crossover** and **mutation** occur.  
    - **Single-point crossover** swaps portions of two parent chromosomes.  
    - **Mutation** randomly alters bits in the offspring.  
    - The crossover and mutation rates (**r1, r2**) are **adjustable** parameters.  
 
-3. **Fitness Calculation Stage**  
+4. **Fitness Calculation Stage**  
    - Evaluates the quality of each chromosome.  
    - The goal is to detect a **stuck-at-zero fault** in a circuit node.  
    - The **fitness function** rewards solutions that propagate the fault to the circuit’s output.  
@@ -60,13 +60,13 @@ The GA processor follows a **pipelined** execution model, where different stages
                (Fraction of inputs on gate Z with non-controlling values)
      ```  
 
-4. **Replacement Stage**  
+5. **Replacement Stage**  
    - The worst chromosomes in the population are replaced with new ones based on **fitness values**.  
    - Two replacement strategies:  
      - **Worst replacement** (mandatory)  
      - **Scoring-based replacement** (optional)  
 
-5. **Best Found Register**  
+6. **Best Found Register**  
    - A **register stores the best chromosome** found so far.  
    - New solutions are continuously compared against the stored best chromosome.  
    - If a better solution is found, it **replaces** the current best.  
