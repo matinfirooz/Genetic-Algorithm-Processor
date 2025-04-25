@@ -60,10 +60,8 @@ The GA processor follows a **pipelined** execution model, where different stages
      ```  
 
 5. **Replacement Stage**  
-   - The worst chromosomes in the population are replaced with new ones based on **fitness values**.  
-   - Two replacement strategies:  
-     - **Worst replacement** (mandatory)  
-     - **Scoring-based replacement** (optional)  
+   
+   The newly generated offspring replace the worst-performing chromosomes in the population. There are two replacement strategies: a mandatory worst replacement strategy and an optional scoring-based replacement strategy.  
 
 6. **Best Found Register**  
    - A **register stores the best chromosome** found so far.  
