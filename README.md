@@ -10,8 +10,7 @@ This project implements a **Genetic Algorithm (GA) Processor** using **Verilog**
 3. [How the Genetic Algorithm Processor Works](#how-the-genetic-algorithm-processor-works)  
    3.1. [Pipeline Stages and Execution Flow](#pipeline-stages-and-execution-flow)  
 4. [Pipeline Execution Parameters](#pipeline-execution-parameters)  
-5. [Implementation Details](#implementation-details)  
-6. [Reference](#reference)
+5. [Reference](#reference)
 
 ---
 
@@ -25,10 +24,7 @@ In this project, the **GA Processor** is designed to find a **test vector** that
 
 ## Project Goal  
 
-- **Design a hardware accelerator** for **Genetic Algorithm (GA)** computations.  
-- Implement the GA processor with **pipeline architecture** to optimize execution speed.  
-- Use **Verilog** to model and simulate the GA processor.  
-- Evaluate the processor’s performance in solving a **test vector generation problem** in digital circuits.  
+The entire GA processor is described in Verilog and functions as a hardware accelerator. It reads the initial population from memory and continuously runs the genetic algorithm in a pipelined manner. The result is stored in a dedicated register for final output. This implementation is well-suited for deployment on FPGA or ASIC platforms.
 
 ---
 
@@ -77,16 +73,6 @@ These parameters control the execution of the GA processor:
 - **Mutation Probability** = `0.04`  
 
 ---
-
-##  Implementation Details  
-
-- The **GA Processor** is implemented using **Verilog**.  
-- It is designed as a **hardware accelerator** to speed up GA computations.  
-- The processor reads the **initial population** from memory and executes GA steps in a pipelined fashion.  
-- Final results are stored in a **register** for output.  
-
----
-
 
 ##  Reference  
 [1] Alinodehi, S. P. H., Moshfe, S., Zaeimian, M. S., Khoei, A., & Hadidi, K. (2015). High-speed general-purpose genetic algorithm processor. *IEEE Transactions on Cybernetics*, 46(7), 1551-1565.  
