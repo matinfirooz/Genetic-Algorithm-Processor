@@ -37,7 +37,7 @@ In this project, the **GA Processor** is designed to find a **test vector** that
 
 The GA processor follows a **pipelined** execution model, where different stages of the algorithm are processed simultaneously to maximize efficiency.
 
-### ** Pipeline Stages & Execution Flow**  
+###  Pipeline Stages & Execution Flow  
 
 1. **Selection Stage**  
    - Uses **tournament selection** (degree of 5) to pick **two parent chromosomes**.  
