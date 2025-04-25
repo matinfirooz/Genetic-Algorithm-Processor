@@ -3,6 +3,18 @@
 This project implements a **Genetic Algorithm (GA) Processor** using **Verilog**, designed to solve optimization problems efficiently. The processor leverages **pipeline processing** to improve the execution speed of the algorithm.
 
 ---
+## Table of Contents
+
+1. [Overview](#overview)  
+2. [What is a Genetic Algorithm?](#what-is-a-genetic-algorithm)  
+3. [Project Goal](#project-goal)  
+4. [How the Genetic Algorithm Processor Works](#how-the-genetic-algorithm-processor-works)  
+   4.1. [Pipeline Stages and Execution Flow](#pipeline-stages-and-execution-flow)  
+5. [Pipeline Execution Parameters](#pipeline-execution-parameters)  
+6. [Implementation Details](#implementation-details)  
+7. [Reference](#reference)
+
+---
 
 ## What is a Genetic Algorithm?  
 
