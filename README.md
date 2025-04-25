@@ -48,9 +48,9 @@ The GA processor follows a **pipelined** execution model, where different stages
    
 
 4. **Fitness Calculation Stage**  
-   - Evaluates the quality of each chromosome.  
-   - The goal is to detect a **stuck-at-zero fault** in a circuit node.  
-   - The **fitness function** rewards solutions that propagate the fault to the circuit’s output.  
+
+   Following this is the fitness calculation stage. In this stage, the processor evaluates the quality of each chromosome based on its ability to detect a stuck-at-zero fault. The fitness function gives a base score of one if the fault is excited. Additional points are added based on the fraction of inputs with non-controlling values at two specific gates, Y and Z. The more favorable these conditions, the higher the fitness score.
+   
    - The fitness score is calculated as:  
      ```math
      Fitness = (1 if fault is excited, else 0) +  
@@ -58,11 +58,11 @@ The GA processor follows a **pipelined** execution model, where different stages
                (Fraction of inputs on gate Z with non-controlling values)
      ```  
 
-5. **Replacement Stage**  
+6. **Replacement Stage**  
    
    The newly generated offspring replace the worst-performing chromosomes in the population. There are two replacement strategies: a mandatory worst replacement strategy and an optional scoring-based replacement strategy.  
 
-6. **Best Found Register**  
+7. **Best Found Register**  
 
    Finally, the best-found register tracks the highest-scoring chromosome discovered so far. Each new solution is compared to the current best. If the new solution performs better, it replaces the previous best. This register is also included in future selection rounds to preserve strong candidates. Once the genetic algorithm meets its termination condition, the best chromosome is output as the final result.
 
