@@ -64,11 +64,8 @@ The GA processor follows a **pipelined** execution model, where different stages
    The newly generated offspring replace the worst-performing chromosomes in the population. There are two replacement strategies: a mandatory worst replacement strategy and an optional scoring-based replacement strategy.  
 
 6. **Best Found Register**  
-   - A **register stores the best chromosome** found so far.  
-   - New solutions are continuously compared against the stored best chromosome.  
-   - If a better solution is found, it **replaces** the current best.  
-   - This register also participates in **tournament selection** to ensure strong solutions persist.  
-   - When the **GA termination condition** is met, the stored best chromosome is output as the final result.  
+
+   Finally, the best-found register tracks the highest-scoring chromosome discovered so far. Each new solution is compared to the current best. If the new solution performs better, it replaces the previous best. This register is also included in future selection rounds to preserve strong candidates. Once the genetic algorithm meets its termination condition, the best chromosome is output as the final result.
 
 ---
 
