@@ -43,11 +43,10 @@ The GA processor follows a **pipelined** execution model, where different stages
 
    The first stage is the selection stage. It uses a tournament selection strategy with a degree of five to pick two parent chromosomes. A random number generator selects individuals from separate memory banks to ensure diversity.
 
-3. **Crossover & Mutation Stage**  
-   - A **random number** determines whether **crossover** and **mutation** occur.  
-   - **Single-point crossover** swaps portions of two parent chromosomes.  
-   - **Mutation** randomly alters bits in the offspring.  
-   - The crossover and mutation rates (**r1, r2**) are **adjustable** parameters.  
+3. **Crossover & Mutation Stage**
+
+   A random value determines whether crossover and mutation operations will occur. The crossover is implemented as a single-point crossover, where segments of two parent chromosomes are exchanged. Mutation randomly alters individual bits in the resulting offspring. The probabilities of crossover and mutation are adjustable using two parameters, r1 and r2.
+   
 
 4. **Fitness Calculation Stage**  
    - Evaluates the quality of each chromosome.  
